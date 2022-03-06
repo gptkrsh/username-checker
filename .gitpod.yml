@@ -1,0 +1,8 @@
+tasks:
+  - init: |
+      npm install
+      gp sync-done installation
+    command: npm run lint
+  - init: gp sync-await installation
+      npm run build
+  - command: npm run start
