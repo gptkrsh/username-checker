@@ -1,8 +1,14 @@
 tasks:
-  - init: |
-      npm install
-      gp sync-done installation
-    command: npm run lint
-  - init: gp sync-await installation
-      npm run build
-  - command: npm run start
+  - before: npm install
+  - init: npm run lint
+    command: npm run build && npm run start
+
+github:
+  prebuilds:
+    master: true
+    branches: true
+    addCheck: true
+    addComment: false
+    addBadge: true
+    pullRequests: true
+    pullRequestsFromForks: true
