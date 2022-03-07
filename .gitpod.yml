@@ -1,7 +1,9 @@
 tasks:
   - before: npm install
-  - init: npm run build
-    command: npm run start
+  - init: |
+      npm i next
+      npm run lint
+    command: npm run build && npm run start
 
 github:
   prebuilds:
