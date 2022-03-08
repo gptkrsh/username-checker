@@ -1,0 +1,16 @@
+tasks:
+  - before: npm install
+  - init: |
+      npm i next
+      npm run lint
+    command: npm run build && npm run start
+
+github:
+  prebuilds:
+    master: true
+    branches: true
+    addCheck: true
+    addComment: false
+    addBadge: true
+    pullRequests: true
+    pullRequestsFromForks: true
