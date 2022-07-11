@@ -30,3 +30,4 @@ jobs:
           tag_name: ${{ steps.release.outputs.version }}
           release_name: ${{ steps.release.outputs.tag }}
           body: ${{ steps.release.outputs.clean_changelog }}
+          
